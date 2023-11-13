@@ -12,13 +12,11 @@ return function()
     require('mason-lspconfig').setup({
         -- Replace the language servers listed here 
         -- with the ones you want to install
-        ensure_installed = {'pyright',
-                            'clangd',
+        ensure_installed = {'clangd',
                             'cmake',
                             'texlab',
                             'lua_ls',
                             'marksman',
-                            'robotframework_ls',
                             'yamlls',
                             'bashls',
                             'svlangserver'},
@@ -99,10 +97,6 @@ return function()
         update_in_insert = false,
         severity_sort = false,
     })
-
-
-
-
 
     lsp.setup()
 end
