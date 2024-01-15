@@ -32,8 +32,6 @@ keymap("x", "<C-c>", "\"+y", opts)
 
 
 -- Nvim tree
-keymap("n", "<C-i>", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<C-f>", ":NvimTreeFocus<CR>", opts)
 keymap("n", "m", ":NvimTreeFocus<CR>", opts)
 
 --vim.g.python3_host_prog = '/home/evage/networks/test/robotframework/test/pyats/bin/python'
