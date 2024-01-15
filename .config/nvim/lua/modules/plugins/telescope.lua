@@ -2,7 +2,15 @@ local telescope = {}
 
 telescope['nvim-telescope/telescope.nvim'] = {
 	cmd = "Telescope",
-	--config = require("modules.tool.telescope"),
+	config = require("modules.configs.telescope"),
+    init = function()
+        local builtin = require('telescope.builtin')
+        vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+        vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+        vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+    end,
+
 	dependencies = {
 		{ "nvim-tree/nvim-web-devicons" },
 		{ "nvim-lua/plenary.nvim" },
