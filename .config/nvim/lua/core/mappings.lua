@@ -11,7 +11,7 @@ keymap("t", "<C-k>", "<C-\\><C-n>", opts)
 
 --[[ NORMAL --]] 
 keymap("n", "<F2>", ":%y+<CR>", opts)
-keymap("n", "tp", ":tabp", opts)
+keymap("n", "tp", ":tabp<CR>", opts)
 keymap("n", "tn", ":tabn<CR>", opts)
 keymap("n", "J", "j", opts)
 keymap("n", "<Space>", "<C-w>w", opts)
