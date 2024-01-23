@@ -9,7 +9,7 @@ keymap("i", "<C-k>", "<ESC>", opts)
 --[[ TERMINAL --]]
 keymap("t", "<C-k>", "<C-\\><C-n>", opts)
 
---[[ NORMAL --]] 
+--[[ NORMAL --]]
 keymap("n", "<F2>", ":%y+<CR>", opts)
 keymap("n", "tp", ":tabp<CR>", opts)
 keymap("n", "tn", ":tabn<CR>", opts)
@@ -26,10 +26,11 @@ keymap("n", "sl", "<C-w>l", opts)
 keymap("n", "ss", ":split<Return>", opts)
 keymap("n", "sv", ":vsplit<Return>", opts)
 
---[[ VISUAL -]] 
+--[[ VISUAL --]]
 keymap("x", "<C-c>", "\"+y", opts)
 
-
+--[[ MACRO --]]
+keymap("n", "ln", ":let @+='../'.expand('%:t').':'.line('.')<CR>", opts)
 
 -- Nvim tree
 keymap("n", "m", ":NvimTreeFocus<CR>", opts)
