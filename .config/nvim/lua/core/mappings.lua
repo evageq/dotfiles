@@ -23,8 +23,8 @@ keymap("n", "sk", "<C-w>k", opts)
 keymap("n", "sl", "<C-w>l", opts)
 
 -- Split windows
-keymap("n", "ss", ":split<Return>", opts)
-keymap("n", "sv", ":vsplit<Return>", opts)
+keymap("n", "ss", ":split<CR><C-w>j", opts)
+keymap("n", "sv", ":vsplit<CR><C-w>l", opts)
 
 --[[ VISUAL --]]
 keymap("x", "<C-c>", "\"+y", opts)
