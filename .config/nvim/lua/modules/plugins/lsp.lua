@@ -22,11 +22,9 @@ lsp['hrsh7th/nvim-cmp'] = {
 
 }
 
---[[
 lsp['L3MON4D3/LuaSnip'] = {
 
 }
--]]
 
 lsp['VonHeikemen/lsp-zero.nvim'] = {
     branch = 'v3.x',
