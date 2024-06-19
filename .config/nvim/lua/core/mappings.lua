@@ -30,7 +30,7 @@ keymap("n", "sv", ":vsplit<CR><C-w>l", opts)
 keymap("x", "<C-c>", "\"+y", opts)
 
 --[[ MACRO --]]
-keymap("n", "<leader>ln", ":let @+='../'.expand('%:t').':'.line('.')<CR>", opts)
+keymap("n", "<leader>ln", ":let @+=expand('%').':'.line('.')<CR>", opts)
 
 -- Nvim tree
 keymap("n", "m", ":NvimTreeFocus<CR>", opts)
