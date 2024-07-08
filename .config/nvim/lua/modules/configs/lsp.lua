@@ -15,6 +15,8 @@ return function()
         ensure_installed = {'clangd',
                             'cmake',
                             'texlab',
+                            'pylsp',
+                            'pyright',
                             'lua_ls',
                             'marksman',
                             'yamlls',
@@ -24,6 +26,10 @@ return function()
             lsp.default_setup,
         },
     })
+
+    require("lspconfig").pyright.setup{
+        autostart = false,
+    }
 
     -- deprecated
     --lsp.nvim_workspace()
@@ -95,7 +101,7 @@ return function()
         signs = true,
         underline = true,
         update_in_insert = false,
-        severity_sort = false,
+        severity_sort = true,
     })
 
     lsp.setup()
