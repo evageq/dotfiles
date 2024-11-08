@@ -108,12 +108,11 @@ source $ZSH/oh-my-zsh.sh
 alias gst='git status'
 alias gaa='git add -A'
 alias gau='git add -u'
-alias gc='git commit'
-alias gcf='git commit --fixup'
+alias gmt='git commit'
+alias gmtf='git commit --fixup'
 alias gcm='git checkout main'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gsi='git switch'
 
 # git plugin oh my zsh disable
 unalias grb
