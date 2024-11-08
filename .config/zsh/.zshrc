@@ -115,7 +115,9 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gsi='git switch'
 
-grb(){
+# git plugin oh my zsh disable
+unalias grb
+grb() {
 	git rebase -i --autosquash "$1^"
 }
 
