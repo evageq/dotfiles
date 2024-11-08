@@ -151,6 +151,7 @@ if type fzf &> /dev/null && type nvim &> /dev/null; then
 	}
 fi
 
+alias shcp='xclip -i -selection clipboard'
 
 # The next line updates PATH for CLI.
 if [ -f '/home/evage/yandex-cloud/path.bash.inc' ]; then source '/home/evage/yandex-cloud/path.bash.inc'; fi
