@@ -146,6 +146,12 @@ if type fzf &> /dev/null && type rg &> /dev/null; then
   export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 fi
 
+if type fzf &> /dev/null && type nvim &> /dev/null; then
+	nfzf() {
+		nvim $(fzf -q $1)
+	}
+fi
+
 
 # The next line updates PATH for CLI.
 if [ -f '/home/evage/yandex-cloud/path.bash.inc' ]; then source '/home/evage/yandex-cloud/path.bash.inc'; fi
