@@ -105,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 # git
+# unalias git plugin aliases
+unalias -m "g*"
 alias gst='git status'
 alias gaa='git add -A'
 alias gau='git add -u'
@@ -114,8 +116,6 @@ alias gcm='git checkout main'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
-# git plugin oh my zsh disable
-unalias grb
 grb() {
 	git rebase -i --autosquash "$1^"
 }
