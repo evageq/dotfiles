@@ -113,6 +113,7 @@ alias gau='git add -u'
 alias gmt='git commit'
 alias gmtf='git commit --fixup'
 alias gcm='git checkout main'
+alias gsi='git switch'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
