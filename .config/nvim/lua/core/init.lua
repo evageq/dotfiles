@@ -31,7 +31,7 @@ opt.termguicolors = true
 --opt.timeoutlen = 100
 opt.undofile = true
 
-
+vim.cmd('source ~/.config/nvim/lua/core/tab_indices.vim')
 
 require("core.mappings")
 
