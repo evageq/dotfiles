@@ -108,8 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # unalias git plugin aliases
 unalias -m "g*"
 alias gst='git status'
-alias gs='git stash'
-alias gsp='git stash pop'
+alias gh='git stash'
+alias ghp='git stash pop'
 alias ga='git add'
 alias gaa='git add -A'
 alias gau='git add -u'
@@ -144,7 +144,6 @@ alias gpf='git push --force'
 alias cdr='cd $(git rev-parse --show-toplevel)' # cd to git Root
 alias hs='git rev-parse --short HEAD'
 alias hc='git log -n 1 HEAD'
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias b2='../../'
 alias b3='../../../'
