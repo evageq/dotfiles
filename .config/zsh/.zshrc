@@ -119,6 +119,7 @@ alias gcm='git checkout main'
 alias gsi='git switch'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gl='git log --oneline'
 # [g]it [l]og l[a]st commi[t]
 alias glat='git log --no-merges HEAD^..HEAD'
 alias glato='git log --no-merges HEAD^..HEAD'
