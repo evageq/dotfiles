@@ -35,5 +35,8 @@ keymap("n", "<leader>ln", ":let @+=expand('%').':'.line('.')<CR>", opts)
 -- Nvim tree
 keymap("n", "m", ":NvimTreeFocus<CR>", opts)
 
+
+keymap("n", "<C-f>", ":Cpfp<CR>", opts)
+
 --vim.g.python3_host_prog = '/home/evage/networks/test/robotframework/test/pyats/bin/python'
 
