@@ -108,6 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # unalias git plugin aliases
 unalias -m "g*"
 alias gst='git status'
+alias gs='git stash'
+alias gsp='git stash pop'
 alias ga='git add'
 alias gaa='git add -A'
 alias gau='git add -u'
