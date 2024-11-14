@@ -125,6 +125,10 @@ alias gli='git log --oneline'
 alias glat='git log --no-merges HEAD^..HEAD'
 alias glato='git log --no-merges HEAD^..HEAD'
 
+glc() {
+    git log $1^.$1
+}
+
 grb() {
 	git rebase -i --autosquash "$1^"
 }
