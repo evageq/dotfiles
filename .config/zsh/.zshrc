@@ -117,6 +117,9 @@ alias gcm='git checkout main'
 alias gsi='git switch'
 alias gd='git diff'
 alias gdc='git diff --cached'
+# [g]it [l]og l[a]st commi[t]
+alias glat='git log --no-merges HEAD^..HEAD'
+alias glato='git log --no-merges HEAD^..HEAD'
 
 grb() {
 	git rebase -i --autosquash "$1^"
@@ -134,11 +137,17 @@ fco() {
 
 alias gp='git push'
 alias gpf='git push --force'
-alias lr='git l -30'
 alias cdr='cd $(git rev-parse --show-toplevel)' # cd to git Root
 alias hs='git rev-parse --short HEAD'
-alias hm='git log --format=%B -n 1 HEAD'
+alias hc='git log -n 1 HEAD'
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias b2='../../'
+alias b3='../../../'
+
+mkdircd() {
+  mkdir -p $1 && cd $1
+}
 
 # fzf
 if type fzf &> /dev/null && type rg &> /dev/null; then
