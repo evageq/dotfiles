@@ -37,7 +37,8 @@ keymap("n", "m", ":NvimTreeFocus<CR>", opts)
 
 
 keymap("n", "<C-f>", ":Cpfp<CR>", opts)
-keymap("n", "<C-n>", ":Startify<CR>", opts)
+keymap("n", "<leader>n", ":Startify<CR>", opts)
+keymap("n", "<leader>cd", ":cd %:p:h<CR>", opts)
 
 --vim.g.python3_host_prog = '/home/evage/networks/test/robotframework/test/pyats/bin/python'
 
