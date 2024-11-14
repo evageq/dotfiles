@@ -33,6 +33,13 @@ opt.undofile = true
 
 vim.cmd('source ~/.config/nvim/lua/core/tab_indices.vim')
 
+function CopyFilePath()
+    local filepath = vim.fn.expand('%:p')
+    vim.fn.setreg('+', filepath)
+    print("File path copied to clipboard: " .. filepath)
+end
+vim.api.nvim_create_user_command('Cpfp', CopyFilePath, {})
+
 require("core.mappings")
 
 local load_pack = function()
