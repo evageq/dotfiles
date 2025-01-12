@@ -93,6 +93,12 @@ return function()
         filters = {
             dotfiles = false,
         },
+        update_focused_file = {
+            enable = true,
+            update_root = {
+                enable = true,
+            },
+        },
     }
 
 end
