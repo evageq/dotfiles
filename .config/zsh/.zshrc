@@ -126,7 +126,8 @@ alias glat='git log --no-merges HEAD^..HEAD'
 alias glato='git log --no-merges HEAD^..HEAD'
 
 glc() {
-    git log $1^.$1
+    commit=${1:-HEAD}
+    git log $commit^..$commit
 }
 
 grb() {
