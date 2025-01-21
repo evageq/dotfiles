@@ -130,6 +130,11 @@ glc() {
     git log $commit^..$commit
 }
 
+glcp() {
+    commit=${1:-HEAD}
+    git log $commit^..$commit -p
+}
+
 grb() {
 	git rebase -i --autosquash "$1^"
 }
