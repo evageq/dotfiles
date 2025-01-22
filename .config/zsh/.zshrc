@@ -136,7 +136,14 @@ glcp() {
 }
 
 grb() {
+    commit=${1:-HEAD}
 	git rebase -i --autosquash "$1^"
+}
+
+gfrb() {
+    commit=$(git log --oneline | fzf | awk '{print $1}')
+    git commit --fixup $commit
+	git rebase -i --autosquash "$commit^"
 }
 
 # [f]uzzy [b]ranch check[o]ut
