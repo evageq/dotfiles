@@ -1,6 +1,8 @@
 local opt = vim.opt
 local g = vim.g
 
+local global = require("core.global")
+
 
 ----------------------------- globals -------------------------------
 g.mapleader = " "
@@ -33,7 +35,9 @@ opt.termguicolors = true
 --opt.timeoutlen = 100
 opt.undofile = true
 
-vim.cmd('source ~/.config/nvim/lua/core/tab_indices.vim')
+local tab_indices_filename = "tab_indices.vim"
+local tab_indices_path = global.vim_path .. "/lua/core/" .. tab_indices_filename
+vim.cmd('source ' .. tab_indices_path)
 
 function CopyFilePath()
     local filepath = vim.fn.expand('%:p')

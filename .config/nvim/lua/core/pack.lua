@@ -6,6 +6,7 @@ local data_dir = global.data_dir
 local lazy_path = data_dir .. "lazy/lazy.nvim"
 local modules_dir = vim_path .. "/lua/modules"
 local user_config_dir = vim_path .. "/lua/user"
+local misc_configs_dir = modules_dir .. "/misc_configs"
 
 
 local Lazy = {}
@@ -100,4 +101,20 @@ function Lazy:load_lazy()
 	require("lazy").setup(self.modules, lazy_settings_test)
 end
 
+function load_configs(path)
+    local files = vim.fn.glob(path .. '**/*.lua', true, true)
+
+    for _, file in ipairs(files) do
+        --local success, _ = pcall(require, file:match('.-/(.+)'):gsub('/', '.'))
+        vim.cmd('source ' .. file)
+        --[[
+        if not success then
+            print('Error loading ' .. file)
+        end
+        --]]
+    end
+
+end
+
 Lazy:load_lazy()
+load_configs(misc_configs_dir)

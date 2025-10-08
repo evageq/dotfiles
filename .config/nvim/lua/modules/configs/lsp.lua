@@ -1,5 +1,5 @@
 return function()
-    local lsp= require('lsp-zero')
+    local lsp = vim.lsp
     lsp.extend_lspconfig()
 
     lsp.on_attach(function(client, bufnr)
@@ -12,24 +12,10 @@ return function()
     require('mason-lspconfig').setup({
         -- Replace the language servers listed here 
         -- with the ones you want to install
-        ensure_installed = {'clangd',
-                            'cmake',
-                            'texlab',
-                            'pylsp',
-                            'pyright',
-                            'lua_ls',
-                            'marksman',
-                            'yamlls',
-                            'bashls',
-                            'svlangserver'},
         handlers = {
             lsp.default_setup,
         },
     })
-
-    require("lspconfig").pyright.setup{
-        autostart = false,
-    }
 
     -- deprecated
     --lsp.nvim_workspace()

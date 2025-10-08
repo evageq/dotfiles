@@ -40,9 +40,6 @@ gitsigns['lewis6991/gitsigns.nvim'] = {
             row = 0,
             col = 1
         },
-        yadm = {
-            enable = false
-        },
     }
 }
 
