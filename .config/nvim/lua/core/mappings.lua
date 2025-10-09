@@ -43,3 +43,5 @@ keymap("n", "<leader>cd", ":cd %:p:h<CR>", opts)
 
 --vim.g.python3_host_prog = '/home/evage/networks/test/robotframework/test/pyats/bin/python'
 
+-- LSP
+keymap('i', '<C-Space>', '<C-x><C-o>', opts)
