@@ -1,5 +1,3 @@
-local lsp = vim.lsp
-
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         -- Keymap options
@@ -36,7 +34,3 @@ vim.diagnostic.config({
     severity_sort = true,
     signs = signs
 })
-
-lsp.config['clangd'] = {cmd={'clangd'},}
-lsp.enable('clangd')
-
