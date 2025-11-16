@@ -103,7 +103,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #
-#
+
+alias aa='nvim .'
+alias rc='./script.sh'
+alias can='trash-put'
+alias v='nvim'
+
+alias grep='grep --color'
+alias rgrep='rgrep --color'
+alias pdf='okular'
+
 # git
 # unalias git plugin aliases
 unalias -m "g*"
@@ -189,5 +198,6 @@ if [ -f '/home/evage/yandex-cloud/path.bash.inc' ]; then source '/home/evage/yan
 
 # The next line enables shell command completion for yc.
 if [ -f '/home/evage/yandex-cloud/completion.zsh.inc' ]; then source '/home/evage/yandex-cloud/completion.zsh.inc'; fi
+
 
 
