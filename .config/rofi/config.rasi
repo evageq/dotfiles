@@ -1,0 +1,32 @@
+configuration {
+    font:                       "Agave Nerd Font 16";
+    show-icons:                 true;
+    scroll-method:              1;
+    modes: [ combi ];
+    combi-modes: [ window, drun, run ];
+    display-run:                 " ";
+}
+
+@import "~/.config/rofi/vim.rasi"
+
+@theme "~/.config/rofi/colors.rasi"
+
+@theme "DarkBlue"
+
+window {
+    height: 20em;
+    width: 30em;
+}
+listbox {
+    padding:                     0em;
+    spacing:                     0em;
+    orientation:                 horizontal;
+    children:                    [ "listview" ];
+}
+
+listview {
+    padding:                     1em;
+    spacing:                     0.3em;
+}
+
+
