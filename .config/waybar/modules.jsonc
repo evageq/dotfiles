@@ -6,7 +6,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "custom/layout", "clock"],
     // Modules configuration
     "keyboard-state": {
         "numlock": true,
@@ -16,6 +16,11 @@
             "locked": "",
             "unlocked": ""
         }
+    },
+    "custom/layout": {
+        "exec": "~/.config/scripts/layout_lang.sh",
+        "interval": 1,
+        "format": "{} "
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",

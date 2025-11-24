@@ -10,8 +10,8 @@ sleep 0.5
 config_file="config"
 style_file="style.css"
 
-#waybar -c ~/.config/waybar/themes/default/config -s ~/.config/waybar/themes/default/style.css
-waybar
+waybar -c ~/.config/waybar/modules.jsonc -s ~/.config/waybar/style.css
+#waybar
 
 flock -u 200
 exec 200>&-
