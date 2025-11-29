@@ -1,2 +1,4 @@
 # nvim
 lazy-lock.json
+
+.config/**/colors.css
