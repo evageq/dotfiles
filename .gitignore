@@ -2,3 +2,4 @@
 lazy-lock.json
 
 .config/**/colors.css
+.config/hypr/*colors.conf
