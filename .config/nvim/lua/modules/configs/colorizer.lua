@@ -1,3 +1,6 @@
 return function()
-    require'colorizer'.setup()
+    require'colorizer'.setup({
+        '!h';
+        '!c';
+    })
 end

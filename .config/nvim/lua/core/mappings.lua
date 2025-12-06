@@ -27,6 +27,8 @@ keymap("n", "sl", "<C-w>l", opts)
 keymap("n", "ss", ":split<CR><C-w>j", opts)
 keymap("n", "sv", ":vsplit<CR><C-w>l", opts)
 
+keymap("n", "st", "<C-w>T", opts)
+
 --[[ VISUAL --]]
 keymap("x", "<C-c>", "\"+y", opts)
 
