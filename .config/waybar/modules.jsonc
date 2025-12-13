@@ -61,7 +61,7 @@
     },
     "clock": {
         "interval": 60,
-        "format": "{:%H.%M | %A %d}"
+        "format": "{:%H:%M | %A %d}"
     },
     "cpu": {
         "format": "{usage}% ",
