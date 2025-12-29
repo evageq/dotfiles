@@ -13,7 +13,7 @@ return function()
       formatters = {
         ["clang-format"] = {
           command = "clang-format",
-          prepend_args = { "--style=file", "--fallback-style=gnu" },
+          prepend_args = { "--style=file", "--fallback-style=llvm" },
         },
         stylua = {
           command = "stylua",

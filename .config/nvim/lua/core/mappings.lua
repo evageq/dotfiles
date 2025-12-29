@@ -14,6 +14,7 @@ keymap("n", "<F2>", ":%y+<CR>", opts)
 keymap("n", "tp", ":tabp<CR>", opts)
 keymap("n", "tn", ":tabn<CR>", opts)
 keymap("n", "tt", ":tabnew | b#<CR>", opts)
+keymap("n", "tq", ":tabclose<CR>", opts)
 keymap("n", "J", "j", opts)
 keymap("n", "<Space>", "<C-w>w", opts)
 

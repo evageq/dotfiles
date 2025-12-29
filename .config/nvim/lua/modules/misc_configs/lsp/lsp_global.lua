@@ -1,5 +1,6 @@
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args)
+        local clientID = args.data.client_id
         local opts = {remap = false, noremap = true, silent = true, buffer = args.buf }
         vim.keymap.set('n', '<leader>vrr', ':Telescope lsp_references<CR>', opts)
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
@@ -10,6 +11,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
         vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
         vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
+        vim.opt.completeopt = {'menu', 'menuone', 'popup', 'noinsert', 'fuzzy'}
+        
+        -- vim.lsp.completion.enable(true, clientID, args.bufnr, {autotrigger=true})
+        -- vim.lsp.inlay_hint.enable()
     end,
 })
 
