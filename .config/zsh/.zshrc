@@ -117,18 +117,14 @@ alias pdf='okular'
 # unalias git plugin aliases
 unalias -m "g*"
 alias gst='git status'
-alias gsh='git stash'
-alias gshp='git stash pop'
 alias ga='git add'
+alias gsh='git stash'
 alias gaa='git add -A'
 alias gau='git add -u'
 alias gmt='git commit'
-alias gmtf='git commit --fixup'
-alias gcm='git checkout main'
 alias gsi='git switch'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gl='git log'
 alias gli='git log --oneline'
 # [g]it [l]og l[a]st commi[t]
 alias glat='git log --no-merges HEAD^..HEAD'
@@ -200,4 +196,18 @@ if [ -f '/home/evage/yandex-cloud/path.bash.inc' ]; then source '/home/evage/yan
 if [ -f '/home/evage/yandex-cloud/completion.zsh.inc' ]; then source '/home/evage/yandex-cloud/completion.zsh.inc'; fi
 
 
-
+# IMPORTANT: kitty-scrollback.nvim only supports zsh 5.9 or greater for command-line editing,
+# please check your version by running: zsh --version
+# add the following environment variables to your zsh config (e.g., ~/.zshrc)
+autoload -Uz edit-command-line
+zle -N edit-command-line
+function kitty_scrollback_edit_command_line() { 
+  local VISUAL='/home/evage/.local/share/nvim/lazy/kitty-scrollback.nvim/scripts/edit_command_line.sh'
+  zle edit-command-line
+  zle kill-whole-line
+}
+zle -N kitty_scrollback_edit_command_line
+bindkey '^x^e' kitty_scrollback_edit_command_line
+# [optional] pass arguments to kitty-scrollback.nvim in command-line editing mode
+# by using the environment variable KITTY_SCROLLBACK_NVIM_EDIT_ARGS
+# export KITTY_SCROLLBACK_NVIM_EDIT_ARGS=''

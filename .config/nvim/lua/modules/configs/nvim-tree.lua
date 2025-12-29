@@ -82,10 +82,17 @@ return function()
             ignore = true,
             timeout = 500,
         },
+        actions = {
+            open_file = {
+                quit_on_open = true,
+            },
+        },
         on_attach = my_on_attach,
         sort_by = "case_sensitive",
         view = {
-            width = 30,
+            width = {
+                max = -1,
+            },
         },
         renderer = {
             group_empty = true,
@@ -100,5 +107,7 @@ return function()
             },
         },
     }
+
+    -- https://github.com/nvim-tree/nvim-tree.lua/discussions/2915 nvim-tree width tips
 
 end
