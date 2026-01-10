@@ -14,7 +14,7 @@ while [ ! -z "$chosen" ]; do
     DOTFs=$( ls -a1p | grep -P '^\.[^\$/]+$' | awk -vRS="\n" -vORS=" \t" '1')
     clear && ls -lah
     chosen=`( ( echo -e "$DIRs$DOTDs" | awk -vRS="\t" -vORS="\n" '1' ) | dmenu -i )`
-    if [ ! -z "$chose" ]; then
+    if [ ! -z "$chosen" ]; then
         cd "$chosen"
     fi
 done
