@@ -211,3 +211,11 @@ bindkey '^x^e' kitty_scrollback_edit_command_line
 # [optional] pass arguments to kitty-scrollback.nvim in command-line editing mode
 # by using the environment variable KITTY_SCROLLBACK_NVIM_EDIT_ARGS
 # export KITTY_SCROLLBACK_NVIM_EDIT_ARGS=''
+function source_dbdb() {
+    source $HOME/scripts/dbdb
+    zle reset-prompt
+}
+zle -N source_dbdb
+
+bindkey '^o' source_dbdb
+

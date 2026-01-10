@@ -12,7 +12,9 @@ while [ ! -z "$chosen" ]; do
     DOTDs=$( ls -a1p | grep -P '^\.[^\$/]+/$' | awk -vRS="\n" -vORS="\t" '1')
     FILEs=$( ls -a1p | grep -P '^\w[^\$/]+$' | awk -vRS="\n" -vORS=" \t" '1')
     DOTFs=$( ls -a1p | grep -P '^\.[^\$/]+$' | awk -vRS="\n" -vORS=" \t" '1')
-    clear && printf "\e[1;7;33m $(pwd) \e[0m\n$FILEs\n\e[0;38;5;238m$DOTFs\e[0m\n"
+    clear && ls -lah
     chosen=`( ( echo -e "$DIRs$DOTDs" | awk -vRS="\t" -vORS="\n" '1' ) | dmenu -i )`
-	cd "$chosen"
+    if [ ! -z "$chose" ]; then
+        cd "$chosen"
+    fi
 done
