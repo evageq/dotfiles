@@ -1,12 +1,18 @@
 #!/bin/bash
 
-cache="$HOME/.cache/via"
+cache="$HOME/.cache/via/via_cache"
+recent="$HOME/.cache/via/via_recent"
 
 if [[ "$1" == "-r" ]] || [[ ! -e "$cache" ]]; then
 	cat "$HOME/.config/via/shortcuts" > "$cache"
 	cat "$HOME/.config/via/websites" >> "$cache"
-	find "$HOME" -mindepth 1 \( -name ".*" -o -path "$HOME/code/*" \) -prune -o -print | sort >> "$cache"
+    find "$HOME/Downloads" -maxdepth 1 -type f -name "*.pdf" >> $cache
+    find "$HOME/Books" -maxdepth 1 -type f -name "*.pdf" >> $cache
+    find "$HOME/gitclone" -maxdepth 2 -type f -name "config.def.h" >> $cache
+    find "$HOME/gitclone" -maxdepth 1 -type d >> $cache
+    find "$HOME/Projects" -maxdepth 1 -type d >> $cache
+    echo "$HOME/.config/via" >> $cache
+    sh -c "$HOME/scripts/dmenu_path" >> $cache
 fi
 
-wmctrl -xl | sed "s/^[^.]*\.//;s/ \+\S\+ \+/ /;s/^/w /;s/ \+/ /g"
-cat "$cache"
+cat "$cache" "$recent" | sort | uniq -c | sort -rh | sed 's/\s*//' | cut -d' ' -f2-

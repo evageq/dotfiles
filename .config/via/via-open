@@ -1,6 +1,10 @@
 #!/bin/bash
 
-exec &> /dev/null
+# exec &> /dev/null
+
+BROWSER=firefox
+EDITOR=nvim
+TERMINAL=kitty
 
 while read -r arg; do
 	# first try matching by filename or pathname
@@ -10,7 +14,7 @@ while read -r arg; do
 			wmctrl -a "$target"
 			;;
 		http*)
-			$BROWSER "$arg" &
+            firefox "$arg"
 			;;
 		[^/]*) # doesn't start with '/'
 			sh -c "$arg"
@@ -19,7 +23,7 @@ while read -r arg; do
 			$TERMINAL $EDITOR "$arg" &
 			;;
 		*.pdf | *.epub)
-			mupdf "$arg" &
+			okular "$arg"
 			;;
 		*.mp3)
 			$TERMINAL mpg123 -opulse "$arg" &
@@ -32,7 +36,7 @@ while read -r arg; do
 			mimetype=$(file -Lb --mime-type "$arg")
 			case "$mimetype" in
 				text/html)
-					$BROWSER "$arg" &
+					$BROWSER "$arg"
 					;;
 				text/* | inode/x-empty | message/rfc822)
 					$TERMINAL $EDITOR "$arg" &
