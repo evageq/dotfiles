@@ -1,5 +1,7 @@
 #!/bin/bash
 
 run=$(dmenu -p "via" -i -l 8)
-echo "$run" | cat >> ~/.cache/via/via_recent
+if [[ ! -z "$run" ]]; then
+    echo "$run" | cat >> ~/.cache/via/via_recent
+fi
 echo "$run"
