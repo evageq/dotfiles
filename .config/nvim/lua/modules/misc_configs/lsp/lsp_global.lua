@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
         vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
         vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
-        vim.opt.completeopt = {'menu', 'menuone', 'popup', 'noinsert', 'fuzzy'}
+        vim.opt.completeopt = {'menu', 'menuone', 'popup', 'fuzzy'}
         
         -- vim.lsp.completion.enable(true, clientID, args.bufnr, {autotrigger=true})
         -- vim.lsp.inlay_hint.enable()

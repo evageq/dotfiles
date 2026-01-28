@@ -125,10 +125,10 @@ alias gmt='git commit'
 alias gsi='git switch'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gl='git log'
 alias gli='git log --oneline'
 # [g]it [l]og l[a]st commi[t]
 alias glat='git log --no-merges HEAD^..HEAD'
-alias glato='git log --no-merges HEAD^..HEAD'
 
 glc() {
     commit=${1:-HEAD}
@@ -183,7 +183,7 @@ fi
 
 if type fzf &> /dev/null && type nvim &> /dev/null; then
 	nfzf() {
-		nvim $(fzf -q $1)
+		nvim $(fzf -1 -q $1)
 	}
 fi
 
@@ -215,7 +215,13 @@ function source_dbdb() {
     source $HOME/scripts/dbdb
     zle reset-prompt
 }
+function home_source_dbdb() {
+    cd $HOME
+    source_dbdb
+}
 zle -N source_dbdb
+zle -N home_source_dbdb
 
 bindkey '^o' source_dbdb
+bindkey '^p' home_source_dbdb
 
