@@ -19,6 +19,9 @@ while read -r arg; do
 		[^/]*) # doesn't start with '/'
 			sh -c "$arg"
 			;;
+        */scripts/*)
+            sh -c "$arg"
+            ;;
 		*.txt)
 			$TERMINAL $EDITOR "$arg" &
 			;;
