@@ -12,8 +12,8 @@ return function()
       },
       formatters = {
         ["clang-format"] = {
-          command = "clang-format",
-          prepend_args = { "--style=file", "--fallback-style=llvm" },
+          command = "clang-format $HOME/.clang-format",
+          prepend_args = { "--style=file", "--fallback-style=microsoft" },
         },
         stylua = {
           command = "stylua",

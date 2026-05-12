@@ -17,6 +17,14 @@ if [[ "$1" == "-r" ]] || [[ ! -e "$cache" ]]; then
         "firefox" \
         "obsidian" \
         "okular" \
+        "zoom" \
+        "pavucontrol" \
+        "nautilus" \
+        "scrot -s" \
+        "$HOME/Qt/Tools/QtCreator/bin/qtcreator.sh" \
+        "minecraft-launcher" \
+        "code" \
+        "vmware-view" \
         "virt-manager" >> $cache
 
 fi

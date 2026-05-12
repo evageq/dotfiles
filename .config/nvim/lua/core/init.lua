@@ -1,6 +1,8 @@
 local opt = vim.opt
 local g = vim.g
 
+vim.deprecate = function() end
+
 local global = require("core.global")
 
 
@@ -54,6 +56,9 @@ end
 
 load_pack()
 
-
-
-
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     pattern = {"*.c"},
+--     callback = function(ev)
+--         vim.api.nvim_input('G')
+--     end,
+-- })

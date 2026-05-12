@@ -29,7 +29,7 @@ local signs = {
 
 vim.diagnostic.config({
     virtual_text = false,
-    underline = true,
+    underline = false,
     update_in_insert = false,
     severity_sort = true,
     signs = signs

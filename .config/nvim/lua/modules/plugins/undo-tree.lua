@@ -23,7 +23,7 @@ undo_tree["debugloop/telescope-undo.nvim"] = {
                         ["<cr>"] = function(bufnr)
                             return require("telescope-undo.actions").yank_additions(bufnr)
                         end,
-                        ["<S-cr>"] = function(bufnr)
+                        ["<C-y>"] = function(bufnr)
                             return require("telescope-undo.actions").yank_deletions(bufnr)
                         end,
                         ["u"] = function(bufnr)
