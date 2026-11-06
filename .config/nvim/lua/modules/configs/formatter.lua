@@ -3,6 +3,9 @@ return function()
       default_format_opts = {
         lsp_format = "fallback",
       },
+        log_level = vim.log.levels.DEBUG,
+        notify_on_error = true,
+        notify_no_formatters = true,
       formatters_by_ft = {
         c = { "clang-format" },
         cpp = { "clang-format" }, -- Neovim to detect .h header files as Cpp files (:set filetype?)
